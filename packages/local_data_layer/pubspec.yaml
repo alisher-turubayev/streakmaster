@@ -1,0 +1,23 @@
+name: local_data_layer
+description: >-
+  A data repository layer that interfaces with SQLite
+  to provide local storage features for the StreakMeister app.
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: '^3.6.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  data_layer:
+    path: ../data_layer
+  rxdart: ^0.28.0
+  sqflite: ^2.4.2
+  clock: ^1.1.2
+
+dev_dependencies:
+  test: '>=1.15.0 <2.0.0'
+  mocktail: ^1.0.4
+
