@@ -16,6 +16,10 @@ migrate_working_dir/
 *.iws
 .idea/
 
+# Asset-related (not all assets should be added to version control)
+#  1. font files (we however must include font license)
+*.ttf 
+
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
