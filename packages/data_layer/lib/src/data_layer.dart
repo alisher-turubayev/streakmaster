@@ -37,7 +37,7 @@ abstract class DataLayer {
     required int id,
     String? name,
     String? description,
-    int lastTimestamp,
+    int? lastTimestamp,
     required int goalID,
   });
   Future<void> deleteDailyCheckIn(int id);
