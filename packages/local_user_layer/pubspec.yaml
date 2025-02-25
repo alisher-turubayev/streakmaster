@@ -1,0 +1,21 @@
+name: local_user_layer
+description: >-
+  A user data repository layer that interfaces with SharedPreferences 
+  to provide local storage features for the StreakMeister app.
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: '^3.6.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  user_layer:
+    path: ../user_layer
+  rxdart: ^0.28.0
+  shared_preferences: ^2.5.2  
+
+dev_dependencies:
+  test: '>=1.15.0 <2.0.0'
+  mocktail: ^1.0.4

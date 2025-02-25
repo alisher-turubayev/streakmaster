@@ -1,0 +1,16 @@
+name: user_layer
+description: >-
+  A user data repository layer definition for the StreikMeister app. The 
+  implementations of user_layer should extend the `UserLayer` class. 
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: '^3.6.0'
+
+dependencies:
+  equatable: ^2.0.7
+  meta: ^1.16.0  
+
+dev_dependencies:
+  test: '>=1.15.0 <2.0.0'

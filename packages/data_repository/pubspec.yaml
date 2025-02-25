@@ -1,0 +1,21 @@
+name: data_repository
+description: >-
+  Data repository that provides a facade for all data layers that are used by
+  StreakMeister app.
+publish_to: none
+version: 0.0.1
+
+environment:
+  sdk: '^3.6.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  data_layer:
+    path: ../data_layer
+  user_layer:
+    path: ../user_layer
+
+dev_dependencies:
+  test: '>=1.15.0 <2.0.0'
+  mocktail: ^1.0.4
