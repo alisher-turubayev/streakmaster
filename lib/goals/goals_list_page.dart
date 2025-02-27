@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class GoalsListScreen extends StatelessWidget {
+class GoalsListPage extends StatelessWidget {
+  GoalsListPage({super.key});
+
   final List<Goal> goals = [
     Goal(
       title: 'Exercise',
@@ -21,8 +23,6 @@ class GoalsListScreen extends StatelessWidget {
       completedMilestones: [true, true],
     ),
   ];
-
-  GoalsListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
