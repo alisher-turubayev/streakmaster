@@ -46,7 +46,8 @@ class LocalDataLayer extends DataLayer {
     }
     var path = await getDatabasesPath();
     layer._db = await openDatabase(
-      path,
+      '${path}sqlite.db',
+      version: 1,
       onConfigure: (db) async {
         // Enable foreign keys
         await db.execute('PRAGMA foreign_keys = ON;');
@@ -123,7 +124,7 @@ class LocalDataLayer extends DataLayer {
         // might have to rethink if it's a good idea or whether I should instead open dedicated streams
         response = await db.query(
           'goals',
-          columns: ['id', 'name', 'description', 'icon_data_point', 'timestamp_created', 'timestamp_achieved'],
+          columns: ['id', 'name', 'description', 'icon_data_code_point', 'timestamp_created', 'timestamp_achieved'],
         );
         if (response.isNotEmpty) {
           List<Goal> goals = [];
@@ -144,7 +145,7 @@ class LocalDataLayer extends DataLayer {
           layer._dailyCheckInsStreamController.add(dailyCheckIns);
         }
         response = await db.query(
-          'milestone',
+          'milestones',
           columns: ['id', 'name', 'description', 'icon_data_code_point','timestamp_achieved', 'goal_id'],
         );
         if (response.isNotEmpty) {
