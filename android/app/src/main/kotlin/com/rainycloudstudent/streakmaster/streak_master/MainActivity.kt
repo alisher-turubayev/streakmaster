@@ -1,4 +1,4 @@
-package com.rainycloudstudent.streakmaster.streak_master
+package com.rainycloudstudent.streak_meister
 
 import io.flutter.embedding.android.FlutterActivity
 
